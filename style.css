@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 html,
@@ -10,3 +10,105 @@ body {
 }
 
 /* Add styles here! */
+
+:root {
+  --size-1: 4px;
+  --size-2: 8px;
+  --size-4: 16px;
+  --size-6: 24px;
+  --size-8: 32px;
+  --size-10: 40px;
+  --size-12: 48px;
+  --size-16: 64px;
+  --size-24: 96px;
+  --size-32: 128px;
+  --size-48: 256px;
+  --size-64: 512px;
+
+  --font-sm: 1rem;
+  --font-md: 1.25rem;
+  --font-lg: 1.5rem;
+  --font-xl: 2rem;
+
+  --color-primary: hsl(160deg, 100%, 30%);
+
+  --color-secondary-lighter: hsl(45deg, 100%, 50%);
+  --color-secondary-darker: hsl(45deg, 100%, 40%);
+
+  --color-gray-black: hsl(0deg, 0%, 0%);
+  --color-gray-very-dark: hsl(0deg, 0%, 10%);
+  --color-gray-dark: hsl(0deg, 0%, 30%);
+  --color-gray-medium: hsl(0deg, 0%, 40%);
+  --color-gray-light: hsl(0deg, 0%, 60%);
+  --color-gray-white: hsl(0deg, 0%, 100%);
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--color-gray-black);
+}
+
+.max-width-wrapper {
+  margin: 0 auto;
+  max-width: 525px;
+  padding: 0 var(--size-6);
+}
+
+header {
+  background-color: var(--color-gray-white);
+  padding-top: var(--size-24);
+  padding-bottom: var(--size-16);
+}
+
+header .intro-chunk {
+  max-width: 325px;
+}
+
+.intro-chunk .title {
+  font-size: var(--font-xl);
+  margin-bottom: var(--size-6);
+}
+
+.intro-chunk p {
+  color: var(--color-gray-very-dark);
+  font-size: var(--font-md);
+  padding-top: var(--size-6);
+}
+
+.intro-chunk strong {
+  color: var(--color-primary);
+}
+
+main {
+  border-top: 4px solid var(--color-gray-medium);
+  background-color: var(--color-gray-light);
+  padding: var(--size-16) 0;
+}
+
+main .card {
+  background-color: var(--color-gray-white);
+  border-bottom: 4px solid var(--color-gray-medium);
+  padding: 0 var(--size-6) var(--size-6);
+  margin: 0 calc(-1 * var(--size-6));
+}
+
+.card .indented-heading {
+  width: fit-content;
+  display: inline-block;
+  margin-top: var(--size-2);
+  padding: var(--size-6) var(--size-10);
+  margin-left: calc(-1 * var(--size-10));
+  background-color: var(--color-secondary-lighter);
+  border-bottom: 4px solid var(--color-secondary-darker);
+}
+
+.card p {
+  padding-top: var(--size-6);
+  color: var(--color-gray-very-dark);
+}
